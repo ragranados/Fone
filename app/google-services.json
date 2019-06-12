@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "464004562128",
+    "firebase_url": "https://fone-37aa6.firebaseio.com",
+    "project_id": "fone-37aa6",
+    "storage_bucket": "fone-37aa6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464004562128:android:8e77a84dbbc96382",
+        "android_client_info": {
+          "package_name": "com.example.fonetesting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464004562128-q4ghlh8q1pskkhdbr2s4s5mlp5u13eml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiKBXiL_De3d3l_BQTyVCnZMhxt5EEvu8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464004562128-q4ghlh8q1pskkhdbr2s4s5mlp5u13eml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
