@@ -4,7 +4,8 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".fragments.SecondLevelFragment"
-             android:background="@drawable/background2">
+             android:background="@drawable/background2"
+             android:id="@+id/second_lvl_fragment">
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"

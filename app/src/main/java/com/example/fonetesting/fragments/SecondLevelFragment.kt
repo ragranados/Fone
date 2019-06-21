@@ -18,6 +18,4 @@ class SecondLevelFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_level, container, false)
     }
-
-
 }
