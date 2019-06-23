@@ -18,7 +18,14 @@ import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListener {
+    override fun Game1() {
+        var mIntent = Intent(this,  Game1:: class.java)
+
+               mIntent.putExtra("level", 0)
+
+               this.startActivity(mIntent)
+    }
 
     private var mAuth: FirebaseAuth? = null
 
