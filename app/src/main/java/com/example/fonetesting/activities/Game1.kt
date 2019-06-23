@@ -8,113 +8,45 @@ import com.example.fonetesting.fragments.Complete_words
 import kotlinx.android.synthetic.main.fragment_complete_words.*
 
 class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
+
+    fun chose_option(option: String){
+
+        var intento= tv_word.text.toString()
+
+        tv_word.text=intento.substringBefore('_')+ option +intento.substringAfter('_')
+    }
+
     override fun option1() {
-
-    var intento= tv_word.text.toString()
-
-    val index=intento.indexOf('_')
-    Log.d("HG", index.toString())
-
-    Log.d("HG", intento.substringBefore('_'))
-    Log.d("HG", intento.substringAfter('_'))
-
-
-    tv_word.text=intento.substringBefore('_')+ opc1.text +intento.substringAfter('_')
-
-
-
+        chose_option(opc1.text as String)
 }
 
 
-override fun option2() {
-    var intento= tv_word.text.toString()
-
-    val index=intento.indexOf('_')
-    Log.d("HG", index.toString())
-
-    Log.d("HG", intento.substringBefore('_'))
-    Log.d("HG", intento.substringAfter('_'))
-
-
-    tv_word.text=intento.substringBefore('_')+ opc2.text +intento.substringAfter('_')
+    override fun option2() {
+        chose_option(opc2.text as String)
 }
 
-override fun option3() {
-    var intento= tv_word.text.toString()
-
-    val index=intento.indexOf('_')
-    Log.d("HG", index.toString())
-
-    Log.d("HG", intento.substringBefore('_'))
-    Log.d("HG", intento.substringAfter('_'))
-
-
-    tv_word.text=intento.substringBefore('_')+ opc3.text +intento.substringAfter('_')
+    override fun option3() {
+        chose_option(opc3.text as String)
 }
 
-override fun option4() {
-    var intento= tv_word.text.toString()
-
-    val index=intento.indexOf('_')
-    Log.d("HG", index.toString())
-
-    Log.d("HG", intento.substringBefore('_'))
-    Log.d("HG", intento.substringAfter('_'))
-
-
-    tv_word.text=intento.substringBefore('_')+ opc4.text +intento.substringAfter('_')
+    override fun option4() {
+        chose_option(opc4.text as String)
 }
 
 override fun option5() {
-    var intento= tv_word.text.toString()
-
-    val index=intento.indexOf('_')
-    Log.d("HG", index.toString())
-
-    Log.d("HG", intento.substringBefore('_'))
-    Log.d("HG", intento.substringAfter('_'))
-
-
-    tv_word.text=intento.substringBefore('_')+ opc5.text +intento.substringAfter('_')
+    chose_option(opc5.text as String)
 }
 
 override fun option6() {
-    var intento= tv_word.text.toString()
-
-    val index=intento.indexOf('_')
-    Log.d("HG", index.toString())
-
-    Log.d("HG", intento.substringBefore('_'))
-    Log.d("HG", intento.substringAfter('_'))
-
-
-    tv_word.text=intento.substringBefore('_')+ opc6.text +intento.substringAfter('_')
+    chose_option(opc6.text as String)
 }
 
 override fun option7() {
-    var intento= tv_word.text.toString()
-
-    val index=intento.indexOf('_')
-    Log.d("HG", index.toString())
-
-    Log.d("HG", intento.substringBefore('_'))
-    Log.d("HG", intento.substringAfter('_'))
-
-
-    tv_word.text=intento.substringBefore('_')+ opc7.text +intento.substringAfter('_')
+    chose_option(opc7.text as String)
 }
 
 override fun option8() {
-    var intento= tv_word.text.toString()
-
-    val index=intento.indexOf('_')
-    Log.d("HG", index.toString())
-
-    Log.d("HG", intento.substringBefore('_'))
-    Log.d("HG", intento.substringAfter('_'))
-
-
-    tv_word.text=intento.substringBefore('_')+ opc8.text +intento.substringAfter('_')
+    chose_option(opc8.text as String)
 }
 
 override fun nextWord() {
