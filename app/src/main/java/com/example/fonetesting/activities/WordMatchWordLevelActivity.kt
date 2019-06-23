@@ -54,17 +54,6 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
         super.onDestroy()
     }
 
-    /*override fun onSaveInstanceState(outState: Bundle?, outPersistentState: PersistableBundle?) {
-        super.onSaveInstanceState(outState, outPersistentState)
-        outState?.putInt("currentLevel",currentLevel)
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
-        super.onRestoreInstanceState(savedInstanceState)
-
-        currentLevel = savedInstanceState?.getInt("currentLevel")!!
-    }*/
-
     override fun getNextLevel() {
         setLevelFragment()
     }
@@ -112,8 +101,13 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
     }
 
     fun setLevelFragment() {
-        var newFragment = WordMatchWordLevelFragment.newInstance(currentLevel)
+        var newFragment: Fragment
 
+        if (currentLevel == data_niveles.level_completed.size) {
+            newFragment = GameCompletedFragment.newInstance()
+        } else {
+            newFragment = WordMatchWordLevelFragment.newInstance(currentLevel)
+        }
 
         changeFragment(R.id.content, newFragment)
     }
