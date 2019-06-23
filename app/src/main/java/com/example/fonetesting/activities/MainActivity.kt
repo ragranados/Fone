@@ -19,12 +19,16 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListener {
+    override fun JuegoUnirPalabras() {
+        startActivity(Intent(this, WordMatchWordLevelActivity::class.java))
+    }
+
     override fun Game1() {
-        var mIntent = Intent(this,  Game1:: class.java)
+        var mIntent = Intent(this, Game1::class.java)
 
-               mIntent.putExtra("level", 0)
+        mIntent.putExtra("level", 0)
 
-               this.startActivity(mIntent)
+        this.startActivity(mIntent)
     }
 
     private var mAuth: FirebaseAuth? = null
@@ -70,7 +74,7 @@ class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListe
         }
 
         var btnLogout = findViewById<View>(R.id.logout_test) as MaterialButton
-        btnLogout.setOnClickListener{
+        btnLogout.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
@@ -78,7 +82,7 @@ class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListe
 
     }
 
-    private fun replaceFragment(fragment: Fragment){
+    private fun replaceFragment(fragment: Fragment) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.vp_container, fragment)
         fragmentTransaction.commit()
