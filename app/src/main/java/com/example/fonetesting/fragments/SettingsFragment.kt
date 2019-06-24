@@ -1,6 +1,7 @@
 package com.example.fonetesting.fragments
 
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -21,16 +22,33 @@ class SettingsFragment : Fragment() {
 
     private var mAuth: FirebaseAuth? = null
 
+    private var listener: OnFragmentInteractionListener? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view: View = inflater!!.inflate(R.layout.settings_fragment, container, false)
         view.sign_out_btn.setOnClickListener{
-            mAuth?.signOut()
+            /*mAuth?.signOut()
             Toast.makeText(activity, "Please enter all fields", Toast.LENGTH_SHORT).show()
-            activity?.finish()
+            activity?.finish()*/
+            listener?.logOutF()
+
         }
         return view
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnFragmentInteractionListener) {
+            listener = context
+        } else {
+            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
+        }
+    }
+
+    interface OnFragmentInteractionListener{
+        fun logOutF()
     }
 }

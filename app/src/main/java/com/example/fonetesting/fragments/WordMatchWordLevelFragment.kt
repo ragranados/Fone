@@ -86,6 +86,17 @@ class WordMatchWordLevelFragment : Fragment() {
             true
         }
 
+        /*var longClickListener = View.OnClickListener {
+            var data: ClipData = ClipData.newPlainText("", "")
+            var shadowBuilder = View.DragShadowBuilder(it)
+            it.startDrag(data, shadowBuilder, it, 0)
+
+            true
+        }*/
+
+
+
+
         var dragListenerPalabra1 = View.OnDragListener(fun(v: View, event: DragEvent): Boolean {
 
             var dragEvent: Int = event.action
@@ -213,7 +224,6 @@ class WordMatchWordLevelFragment : Fragment() {
             }
             return true
         })
-
 
         fragmentView.txt1.setOnLongClickListener(longClickListener)
         fragmentView.txt2.setOnLongClickListener(longClickListener)

@@ -24,7 +24,11 @@ import com.google.android.material.button.MaterialButton
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListener {
+class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListener, SettingsFragment.OnFragmentInteractionListener {
+    override fun logOutF() {
+        logOut()
+    }
+
     override fun JuegoUnirPalabras() {
         startActivity(Intent(this, WordMatchWordLevelActivity::class.java))
     }
@@ -89,11 +93,16 @@ class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListe
 
         var btnLogout = findViewById<View>(R.id.logout_test) as MaterialButton
         btnLogout.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            logOut()
         }
 
+    }
+
+    fun logOut(){
+        FirebaseAuth.getInstance().signOut()
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     private fun replaceFragment(fragment: Fragment) {
