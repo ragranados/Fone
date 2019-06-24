@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 import com.example.fonetesting.R
 import kotlinx.android.synthetic.main.fragment_second_level.view.*
