@@ -22,7 +22,7 @@
             android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintVertical_bias="0.097"/>
     <TextView
-            android:text="Lunes"
+            android:text=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/tv_word"
             android:layout_marginTop="8dp"
@@ -102,7 +102,7 @@
             app:layout_constraintEnd_toStartOf="@+id/opc3" android:layout_marginRight="76dp"/>
 
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="Verificar" android:id="@+id/btn_verification"
+            android:text="Iniciar" android:id="@+id/btn_verification"
             tools:ignore="MissingConstraints" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.775"
