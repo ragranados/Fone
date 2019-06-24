@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import com.example.fonetesting.R
 import com.example.fonetesting.adapters.PageAdapter
 import com.example.fonetesting.architecture_components.GameViewModel
