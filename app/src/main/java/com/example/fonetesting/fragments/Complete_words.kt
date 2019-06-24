@@ -36,12 +36,7 @@ class Complete_words : Fragment() {
 
         fun option1()
         fun option2()
-        fun option3()
-        fun option4()
-        fun option5()
-        fun option6()
-        fun option7()
-        fun option8()
+
 
 
 
@@ -76,12 +71,7 @@ class Complete_words : Fragment() {
 
         initOption1(view)
         initOption2(view)
-        initOption3(view)
-        initOption4(view)
-        initOption5(view)
-        initOption6(view)
-        initOption7(view)
-        initOption8(view)
+
 
 
         return view
@@ -99,24 +89,7 @@ class Complete_words : Fragment() {
     fun initOption2(container:View) = container.opc2.setOnClickListener {
         listenerTool?.option2()
     }
-    fun initOption3(container:View) = container.opc3.setOnClickListener {
-        listenerTool?.option3()
-    }
-    fun initOption4(container:View) = container.opc4.setOnClickListener {
-        listenerTool?.option4()
-    }
-    fun initOption5(container:View) = container.opc5.setOnClickListener {
-        listenerTool?.option5()
-    }
-    fun initOption6(container:View) = container.opc6.setOnClickListener {
-        listenerTool?.option6()
-    }
-    fun initOption7(container:View) = container.opc7.setOnClickListener {
-        listenerTool?.option7()
-    }
-    fun initOption8(container:View) = container.opc8.setOnClickListener {
-        listenerTool?.option8()
-    }
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is SearchNewMovieListener) {

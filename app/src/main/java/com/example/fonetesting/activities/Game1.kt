@@ -1,5 +1,6 @@
 package com.example.fonetesting.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +12,7 @@ import kotlinx.android.synthetic.main.fragment_complete_words.*
 
 class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
 
-    fun chose_option(option: String){
+    fun choose_option(option: String){
 
         var intento= tv_word.text.toString()
 
@@ -19,37 +20,15 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
     }
 
     override fun option1() {
-        chose_option(opc1.text as String)
+        choose_option(opc1.text as String)
     }
 
 
     override fun option2() {
-        chose_option(opc2.text as String)
+        choose_option(opc2.text as String)
     }
 
-    override fun option3() {
-        chose_option(opc3.text as String)
-    }
 
-    override fun option4() {
-        chose_option(opc4.text as String)
-    }
-
-    override fun option5() {
-        chose_option(opc5.text as String)
-    }
-
-    override fun option6() {
-     chose_option(opc6.text as String)
-    }
-
-    override fun option7() {
-        chose_option(opc7.text as String)
-    }
-
-    override fun option8() {
-        chose_option(opc8.text as String)
-    }
 
     override fun nextWord() {
         val viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
@@ -57,6 +36,8 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
         val aux=numero1.toInt()
 
         val te= btn_verification.getText().toString()
+        opc1.text=listaopc[aux].toString()
+        opc2.text=listaopc1[aux].toString()
 
         if(te.equals("Iniciar")){
             btn_verification.text="Verificar"
@@ -76,6 +57,9 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
 
                 viewModel.updateLevel(aux+1)
                 tv_word.text=listaaux[aux+1]
+                opc1.text=listaopc[aux+1].toString()
+                opc2.text=listaopc1[aux+1].toString()
+
             }
             else{
                 tv_word.text=listaaux[aux]
@@ -83,6 +67,9 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
         }
         else{
             tv_word.text="Fin del juego"
+            viewModel.updateLevel(0)
+            startActivity(Intent(this, MainActivity::class.java))
+
         }
 
     }
@@ -98,8 +85,10 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
     }
 
 
-    val lista = arrayOf("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado")
-    val listaaux= arrayOf("L_n_s", "Ma_t_s", "M_e_col_s", "J_e_e_", "V_e_n_s", "S_b_d_")
+    val lista = arrayOf("papa", "queso", "pequeño", "tarde", "grama", "tapadera", "broma")
+    val listaaux= arrayOf("pa_a", "_ueso", "pe_ueño", "ta_de", "_rama", "ta_adera", "_roma")
+    val listaopc=  arrayOf("p", "p", "p", "r", "g", "b")
+    val listaopc1= arrayOf("q", "q", "q", "l", "q", "p")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
