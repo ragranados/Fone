@@ -3,13 +3,18 @@ package com.example.fonetesting.fragments
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 
 import com.example.fonetesting.R
+import com.example.fonetesting.architecture_components.GameViewModel
+import kotlinx.android.synthetic.main.fragment_complete_words.*
 import kotlinx.android.synthetic.main.fragment_complete_words.view.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -28,6 +33,7 @@ class Complete_words : Fragment() {
     interface SearchNewMovieListener{
 
         fun nextWord()
+
         fun option1()
         fun option2()
         fun option3()
@@ -47,13 +53,27 @@ class Complete_words : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
         val view= inflater.inflate(R.layout.fragment_complete_words, container, false).apply {
 
-            findViewById<TextView>(R.id.tv_cont).text = arguments?.getString("key_level")
+
+
             /* findViewById<TextView>(R.id.tv_word).text = arguments?.getString("palabra")
              findViewById<TextView>(R.id.tv_cont).text = arguments?.getString("cont")*/
         }
+
+        viewModel.getLevel().observe(this, Observer { gam->
+            gam?.let {
+                tv_cont.text=gam.nivel.toString()
+
+
+                Log.d("HG", "Este nivel le mando" + gam.nivel.toString())            }
+
+        })
+
+
         initSearchButton(view)
+
         initOption1(view)
         initOption2(view)
         initOption3(view)
@@ -67,6 +87,7 @@ class Complete_words : Fragment() {
         return view
 
     }
+
 
     fun initSearchButton(container:View) = container.btn_verification.setOnClickListener {
         listenerTool?.nextWord()

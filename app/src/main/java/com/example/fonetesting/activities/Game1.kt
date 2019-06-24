@@ -56,6 +56,12 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
         val numero1 = tv_cont.getText().toString()
         val aux=numero1.toInt()
 
+        val te= btn_verification.getText().toString()
+
+        if(te.equals("Iniciar")){
+            btn_verification.text="Verificar"
+        }
+
         if(aux<lista.size-1){
 
 

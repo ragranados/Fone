@@ -31,16 +31,11 @@ class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListe
 
     override fun Game1() {
         var mIntent = Intent(this, Game1::class.java)
-        val viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
-        var level:Int = 4
-        viewModel.getLevel().observe(this, Observer { gam->
-            gam?.let {
-                level= gam.nivel
-                Log.d("HG", "Este nivel le mando" + gam.nivel.toString())            }
 
-        })
 
-        mIntent.putExtra("key_level", level.toString())
+
+
+        mIntent.putExtra("key_level", "hola")
 
         this.startActivity(mIntent)
     }
