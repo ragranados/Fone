@@ -86,11 +86,6 @@ class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListe
                     .commit()
         }
 
-        var btnLogout = findViewById<View>(R.id.logout_test) as MaterialButton
-        btnLogout.setOnClickListener {
-            logOut()
-        }
-
     }
 
     fun logOut(){

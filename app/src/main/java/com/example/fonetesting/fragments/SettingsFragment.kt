@@ -30,9 +30,7 @@ class SettingsFragment : Fragment() {
     ): View? {
         val view: View = inflater!!.inflate(R.layout.settings_fragment, container, false)
         view.sign_out_btn.setOnClickListener{
-            /*mAuth?.signOut()
-            Toast.makeText(activity, "Please enter all fields", Toast.LENGTH_SHORT).show()
-            activity?.finish()*/
+
             listener?.logOutF()
 
         }
