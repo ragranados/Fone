@@ -11,21 +11,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProviders
 
 import com.example.fonetesting.R
+import com.example.fonetesting.architecture_components.WordMatchWordViewModel
 import com.example.fonetesting.levelsdata.MatchWordsLevelsData
 import kotlinx.android.synthetic.main.fragment_word_match_word_level.view.*
 
 class WordMatchWordLevelFragment : Fragment() {
-    var data_nivel = MatchWordsLevelsData().getLevelInfo(0)
+    lateinit var data_nivel : ArrayList<String>
     var level: Int = 0
     lateinit var fragmentView: View
     private var listener: OnFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        data_nivel = activity!!.run {
+            ViewModelProviders.of(this).get(WordMatchWordViewModel::class.java).getLevelInfo(level)
+        }
 
-        data_nivel = MatchWordsLevelsData().getLevelInfo(level)
+        //data_nivel = MatchWordsLevelsData().getLevelInfo(level)
     }
 
 

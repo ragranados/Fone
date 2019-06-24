@@ -9,10 +9,12 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-@Database(entities = [game1::class], version = 1, exportSchema = false)
+@Database(entities = [game1::class,MatchWordGame::class], version = 1, exportSchema = false)
 abstract class GameRoomDatabase : RoomDatabase() {
 
     abstract fun gameDao(): game1Dao
+
+    abstract fun MatchWordGameDao(): MatchWordGameDao
 
     companion object {
         @Volatile
@@ -26,7 +28,6 @@ abstract class GameRoomDatabase : RoomDatabase() {
                     GameRoomDatabase::class.java,
                     "Book_database"
                 )
-                    .fallbackToDestructiveMigration()
                     .addCallback(DatabseCall(scope))
                     .build()
                 INSTANCE= instance
