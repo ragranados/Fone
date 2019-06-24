@@ -133,6 +133,8 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
         mTTs.setSpeechRate(1.0f)
 
         mTTs.speak(text, TextToSpeech.QUEUE_FLUSH, null)
+        //mTTs.speak(text, TextToSpeech.QUEUE_FLUSH, null,null)
+
     }
 
     override fun OnGameCompleted() {

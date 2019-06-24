@@ -5,11 +5,20 @@
     android:id="@+id/second_lvl_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2"
     android:orientation="vertical"
     tools:context=".fragments.SecondLevelFragment">
 
+    <TextView
+        android:fontFamily="@font/athfont"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Level Select"
+        android:textSize="40sp"
+        android:gravity="center"/>
+
     <LinearLayout
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -18,26 +27,33 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="28dp"
-            app:cardCornerRadius="5dp"
+            app:cardCornerRadius="5dp">
 
-            app:cardElevation="10dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg3"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 android:orientation="horizontal">
 
                 <TextView
+                    android:fontFamily="@font/athfont"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:text="Ponte a prueba. \n¡Completa la palabra!" />
+                    android:layout_marginLeft="50dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:text="Completa la palabra!" />
 
 
                 <Button
+                    android:fontFamily="@font/athfont"
                     android:id="@+id/btn_play_game1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -53,6 +69,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -61,26 +78,33 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="28dp"
-            app:cardCornerRadius="5dp"
+            app:cardCornerRadius="5dp">
 
-            app:cardElevation="10dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg4"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
                 android:orientation="horizontal">
 
                 <TextView
+                    android:fontFamily="@font/athfont"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="2"
+                    android:layout_marginLeft="50dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
                     android:text="El juego de \nRaúl" />
 
 
                 <Button
+                    android:fontFamily="@font/athfont"
                     android:id="@+id/b_juego_unir_palabras"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
