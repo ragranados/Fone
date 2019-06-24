@@ -6,7 +6,7 @@
                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
                                                    tools:context=".fragments.Complete_words">
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A"
 
               android:id="@+id/tv_cont"/>
 

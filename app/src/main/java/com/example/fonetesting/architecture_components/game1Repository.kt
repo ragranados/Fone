@@ -11,12 +11,13 @@ class game1Repository(private val gameDao: game1Dao) {
     suspend fun insert(game: game1){
         gameDao.insert(game)
     }
-
     @WorkerThread
-    fun updateLevel(level: Int){
+    suspend fun updateLevel(level: Int){
         gameDao.updateLevel(level)
     }
-    fun getLevel(): LiveData<List<game1>> = gameDao.searchId()
+
+
+    fun getLevel(): LiveData<game1> = gameDao.searchId()
 
 
     fun getAll(): LiveData<List<game1>> = gameDao.getGames()

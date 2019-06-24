@@ -15,9 +15,9 @@ interface game1Dao {
     suspend fun insert(game: game1)
 
     @Query("UPDATE table_game1 SET nivel=:nivel WHERE id= 1")
-    fun updateLevel(nivel: Int)
+    suspend fun updateLevel(nivel: Int)
 
 
-    @Query("SELECT * FROM table_game1 WHERE id= 1")
-    fun searchId(): LiveData<List<game1>>
+    @Query("SELECT * FROM table_game1 WHERE id=1")
+    fun searchId(): LiveData<game1>
 }

@@ -49,7 +49,7 @@ class Complete_words : Fragment() {
     ): View? {
         val view= inflater.inflate(R.layout.fragment_complete_words, container, false).apply {
 
-            //findViewById<TextView>(R.id.tv_cont).text = arguments?.getString("key_level")
+            findViewById<TextView>(R.id.tv_cont).text = arguments?.getString("key_level")
             /* findViewById<TextView>(R.id.tv_word).text = arguments?.getString("palabra")
              findViewById<TextView>(R.id.tv_cont).text = arguments?.getString("cont")*/
         }

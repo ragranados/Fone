@@ -52,6 +52,7 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
     }
 
     override fun nextWord() {
+        val viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
         val numero1 = tv_cont.getText().toString()
         val aux=numero1.toInt()
 
@@ -66,6 +67,8 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
 
             if(comprobando){
                 tv_cont.text=((aux+1)).toString()
+
+                viewModel.updateLevel(aux+1)
                 tv_word.text=listaaux[aux+1]
             }
             else{

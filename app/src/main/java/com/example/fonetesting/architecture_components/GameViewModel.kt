@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class GameViewModel(application: Application): AndroidViewModel(application) {
@@ -24,10 +25,10 @@ class GameViewModel(application: Application): AndroidViewModel(application) {
     }
     fun getAll(): LiveData<List<game1>> = repository.getAll()
 
-    fun getLevel() : LiveData<List<game1>> = repository.getLevel()
+    fun getLevel() : LiveData<game1> = repository.getLevel()
 
 
-    fun updateLevel(level : Int) = viewModelScope.launch {
+    fun updateLevel(level : Int) = viewModelScope.launch(Dispatchers.IO) {
         repository.updateLevel(level)
     }
 }
