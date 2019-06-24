@@ -23,10 +23,10 @@
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"/>
 
-    <com.google.android.material.button.MaterialButton
+    <!--<com.google.android.material.button.MaterialButton
         android:id="@+id/logout_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="sign out"/>
+        android:text="sign out"/>-->
 
 </RelativeLayout>
