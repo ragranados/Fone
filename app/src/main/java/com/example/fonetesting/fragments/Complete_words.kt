@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 import com.example.fonetesting.R
 import kotlinx.android.synthetic.main.fragment_complete_words.view.*
@@ -48,6 +49,7 @@ class Complete_words : Fragment() {
     ): View? {
         val view= inflater.inflate(R.layout.fragment_complete_words, container, false).apply {
 
+            //findViewById<TextView>(R.id.tv_cont).text = arguments?.getString("key_level")
             /* findViewById<TextView>(R.id.tv_word).text = arguments?.getString("palabra")
              findViewById<TextView>(R.id.tv_cont).text = arguments?.getString("cont")*/
         }

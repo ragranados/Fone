@@ -7,8 +7,13 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import com.example.fonetesting.R
 import com.example.fonetesting.adapters.PageAdapter
+import com.example.fonetesting.architecture_components.GameViewModel
+import com.example.fonetesting.architecture_components.game1
+import com.example.fonetesting.architecture_components.game1Dao
+import com.example.fonetesting.architecture_components.game1Repository
 import com.example.fonetesting.fragments.FirstLevelFragment
 import com.example.fonetesting.fragments.SecondLevelFragment
 import com.example.fonetesting.fragments.SettingsFragment
@@ -25,8 +30,15 @@ class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListe
 
     override fun Game1() {
         var mIntent = Intent(this, Game1::class.java)
+        val viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
+        var level=viewModel.getLevel()
+        Log.d("HG", level.value?.get(0)?.nivel.toString())
+//        Log.d("HG", (level.value!![0].nivel).toString())
 
-        mIntent.putExtra("level", 0)
+
+
+
+        //mIntent.putExtra("key_level", level.value?.get(0)?.nivel.toString())
 
         this.startActivity(mIntent)
     }

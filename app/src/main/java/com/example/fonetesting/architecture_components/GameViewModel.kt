@@ -23,4 +23,11 @@ class GameViewModel(application: Application): AndroidViewModel(application) {
 
     }
     fun getAll(): LiveData<List<game1>> = repository.getAll()
+
+    fun getLevel() : LiveData<List<game1>> = repository.getLevel()
+
+
+    fun updateLevel(level : Int) = viewModelScope.launch {
+        repository.updateLevel(level)
+    }
 }

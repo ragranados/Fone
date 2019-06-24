@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface game1Dao {
@@ -13,7 +14,10 @@ interface game1Dao {
     @Insert
     suspend fun insert(game: game1)
 
+    @Query("UPDATE table_game1 SET nivel=:nivel WHERE id= 1")
+    fun updateLevel(nivel: Int)
 
-    @Query("SELECT * FROM table_game1 WHERE id LIKE:id")
-    fun searchId(id:Int): LiveData<List<game1>>
+
+    @Query("SELECT * FROM table_game1 WHERE id= 1")
+    fun searchId(): LiveData<List<game1>>
 }

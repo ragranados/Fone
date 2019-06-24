@@ -49,6 +49,9 @@ abstract class GameRoomDatabase : RoomDatabase() {
 
 
         suspend fun LlenarDB(game1: game1Dao) {
+            var game= game1(0)
+
+            game1.insert(game)
 
            /* var game= game1( arrayOf("papa", "queso", "pequeño", "tarde", "grama", "tapadera", "broma"),
                 arrayOf("pa_a", "_ueso", "pe_ueño", "ta_de", "_rama", "ta_adera", "_roma"),
