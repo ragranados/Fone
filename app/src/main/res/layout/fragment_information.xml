@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".fragments.Information" android:orientation="vertical" >
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8dp">
+        <TextView
+                  android:textSize="15sp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="hola" android:id="@+id/text1"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8dp">
+        <TextView
+                  android:textSize="15sp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="hola" android:id="@+id/text2"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8dp">
+        <TextView
+                  android:textSize="15sp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="hola" android:id="@+id/text3"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8dp">
+        <TextView
+                  android:textSize="15sp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="hola" android:id="@+id/text4"/>
+    </LinearLayout>
+
+</LinearLayout>
