@@ -12,16 +12,25 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
+        <TextView
+                android:id="@+id/indicaciones"
+                android:textColor="#000"
+                android:text="\?"
+                android:textSize="30dp"
+                android:textFontWeight="40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        />
 
         <TextView
-            android:id="@+id/titulo_nivel"
-            android:fontFamily="@font/athfont"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="150dp"
-            android:text="Nivel 1"
-            android:textColor="#000000"
-            android:textSize="40dp" />
+                android:id="@+id/titulo_nivel"
+                android:fontFamily="@font/athfont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="150dp"
+                android:text="Nivel 1"
+                android:textColor="#000000"
+                android:textSize="40dp"/>
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -38,7 +47,7 @@
                     android:minWidth="120dp"
                     android:text="palabra 1"
                     android:textColor="#a0d8ef"
-                    android:textSize="@dimen/word_match_word_text_size_portrait" />
+                    android:textSize="@dimen/word_match_word_text_size_portrait"/>
 
             <LinearLayout
                     android:layout_width="150dp"
@@ -48,7 +57,7 @@
                     android:textSize="@dimen/word_match_word_text_size_portrait"
                     android:id="@+id/txt5"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
@@ -68,7 +77,7 @@
                     android:minWidth="120dp"
                     android:text="palabra 2"
                     android:textColor="#a0d8ef"
-                    android:textSize="@dimen/word_match_word_text_size_portrait" />
+                    android:textSize="@dimen/word_match_word_text_size_portrait"/>
 
             <LinearLayout
                     android:layout_width="150dp"
@@ -78,7 +87,7 @@
                     android:textSize="@dimen/word_match_word_text_size_portrait"
                     android:id="@+id/txt6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
@@ -98,7 +107,7 @@
                     android:minWidth="120dp"
                     android:text="palabra 3"
                     android:textColor="#a0d8ef"
-                    android:textSize="@dimen/word_match_word_text_size_portrait" />
+                    android:textSize="@dimen/word_match_word_text_size_portrait"/>
 
             <LinearLayout
                     android:layout_width="150dp"
@@ -108,7 +117,7 @@
                     android:textSize="@dimen/word_match_word_text_size_portrait"
                     android:id="@+id/txt7"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
@@ -127,7 +136,7 @@
                     android:minWidth="120dp"
                     android:text="palabra 3"
                     android:textColor="#a0d8ef"
-                    android:textSize="@dimen/word_match_word_text_size_portrait" />
+                    android:textSize="@dimen/word_match_word_text_size_portrait"/>
 
             <LinearLayout
                     android:layout_width="150dp"
@@ -137,7 +146,7 @@
                     android:textSize="@dimen/word_match_word_text_size_portrait"
                     android:id="@+id/txt8"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
@@ -146,7 +155,7 @@
                 android:id="@+id/evaluar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Evaluar" />
+                android:text="Evaluar"/>
 
 
     </LinearLayout>
