@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListe
 
         bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         if (savedInstanceState == null) {
-            val fragment = FirstLevelFragment()
+            val fragment = SecondLevelFragment()
             supportFragmentManager.beginTransaction().replace(R.id.vp_container, fragment, fragment.javaClass.simpleName)
                     .commit()
         }

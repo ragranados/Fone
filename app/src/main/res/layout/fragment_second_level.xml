@@ -13,7 +13,7 @@
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Level Select"
+        android:text="Niveles"
         android:textSize="40sp"
         android:gravity="center"/>
 
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Play" />
+                    android:text="Jugar" />
 
 
             </LinearLayout>
@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Play" />
+                    android:text="Jugar" />
 
 
             </LinearLayout>
@@ -123,15 +123,19 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="28dp"
-            app:cardCornerRadius="5dp"
+            app:cardCornerRadius="5dp">
 
-            app:cardElevation="10dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg3"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -144,7 +148,11 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:text="El otro que dizque \nharé" />
+                    android:text="Click imagen"
+                    android:layout_marginLeft="50dp"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/athfont"
+                    android:textColor="@color/white"/>
 
 
                 <Button
@@ -152,7 +160,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Play" />
+                    android:text="Jugar" />
 
 
             </LinearLayout>
