@@ -41,7 +41,15 @@ class WordMatchWordLevelFragment : Fragment() {
         fragmentView.titulo_nivel.text = "nivel " + (level + 1).toString()
 
         fragmentView.titulo_nivel.setOnClickListener { view ->
-            listener?.speak(view as TextView)
+            listener?.speak((view as TextView).text.toString())
+        }
+
+        fragmentView.indicaciones.setOnClickListener {
+            listener?.speak("Arrastra las palabras de la derecha y ordénalas de manera que sean como las de la izquierda")
+        }
+
+       if(level!= 0){
+            fragmentView.indicaciones.visibility = View.GONE
         }
 
         initListeners()
@@ -72,7 +80,7 @@ class WordMatchWordLevelFragment : Fragment() {
         // TODO: Update argument type and name
         fun onLevelPassed()
 
-        fun speak(view: TextView)
+        fun speak(text: String)
     }
 
     fun initListeners() {

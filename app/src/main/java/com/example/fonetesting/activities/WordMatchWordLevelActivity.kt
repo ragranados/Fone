@@ -95,11 +95,11 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
     }
 
     override fun reiniciar() {
-        Log.d("reiniciar","si entra")
+        Log.d("reiniciar", "si entra")
         data_niveles.nukeTable()
 
         data_niveles.allLevels.forEachIndexed { index, i ->
-            data_niveles.insert(MatchWordGame(index,false))
+            data_niveles.insert(MatchWordGame(index, false))
         }
     }
 
@@ -137,8 +137,8 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
         changeFragment(R.id.content, newFragment)
     }
 
-    override fun speak(view: TextView) {
-        var text = view.text.toString()
+    override fun speak(text: String) {
+        //var text = view.text.toString()
         mTTs.setPitch(1.0f)
         mTTs.setSpeechRate(1.0f)
 
