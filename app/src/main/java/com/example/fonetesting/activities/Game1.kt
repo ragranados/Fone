@@ -38,39 +38,52 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
         val te= btn_verification.getText().toString()
         opc1.text=listaopc[aux].toString()
         opc2.text=listaopc1[aux].toString()
-
         if(te.equals("Iniciar")){
             btn_verification.text="Verificar"
         }
 
-        if(aux<lista.size-1){
-
-
-            val palabra= tv_word.getText()
-
-            var comprobando: Boolean=false
-
-            comprobando= verification(palabra as String,aux)
-
-            if(comprobando){
-                tv_cont.text=((aux+1)).toString()
-
-                viewModel.updateLevel(aux+1)
-                tv_word.text=listaaux[aux+1]
-                opc1.text=listaopc[aux+1].toString()
-                opc2.text=listaopc1[aux+1].toString()
-
-            }
-            else{
-                tv_word.text=listaaux[aux]
-            }
-        }
-        else{
-            tv_word.text="Fin del juego"
+        if(aux+1==6){
+            tv_cont.text=(0).toString()
             viewModel.updateLevel(0)
+
+
+            tv_word.text="Fin del juego"
+
             startActivity(Intent(this, MainActivity::class.java))
 
         }
+        else{
+            if(aux<lista.size-1){
+
+
+                val palabra= tv_word.getText()
+
+                var comprobando: Boolean=false
+
+                comprobando= verification(palabra as String,aux)
+
+                if(comprobando){
+                    tv_cont.text=((aux+1)).toString()
+
+                    viewModel.updateLevel(aux+1)
+                    tv_word.text=listaaux[aux+1]
+                    opc1.text=listaopc[aux+1].toString()
+                    opc2.text=listaopc1[aux+1].toString()
+
+                }
+                else{
+                    tv_word.text=listaaux[aux]
+                }
+            }
+            else{
+                tv_word.text="Fin del juego"
+                viewModel.updateLevel(0)
+                startActivity(Intent(this, MainActivity::class.java))
+
+            }
+
+        }
+
 
     }
     fun verification(texto:String, posicion:Int):Boolean{

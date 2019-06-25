@@ -62,7 +62,7 @@ class Complete_words : Fragment() {
                 tv_cont.text=gam.nivel.toString()
 
 
-                Log.d("HG", "Este nivel le mando" + gam.nivel.toString())            }
+                Log.d("HG", "Este nivel le mando" + gam.nivel.toString() + "Y el id" + gam.id.toString())            }
 
         })
 
