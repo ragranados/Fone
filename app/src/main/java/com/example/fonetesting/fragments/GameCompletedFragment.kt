@@ -32,6 +32,8 @@ class GameCompletedFragment : Fragment() {
 
         fragmentView.b_regresar_pagina_principal.setOnClickListener { onButtonPressed() }
 
+        fragmentView.reiniciar.setOnClickListener { reiniciar() }
+
         return view
     }
 
@@ -54,9 +56,17 @@ class GameCompletedFragment : Fragment() {
         listener = null
     }
 
+
+
+    fun reiniciar(){
+        listener?.reiniciar()
+    }
+
     interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         fun OnGameCompleted()
+
+        fun reiniciar()
     }
 
     companion object {

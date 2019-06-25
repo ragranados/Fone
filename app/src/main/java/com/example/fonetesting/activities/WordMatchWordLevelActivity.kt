@@ -24,6 +24,7 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
     WordMatchWordLevelFragment.OnFragmentInteractionListener,
     GameCompletedFragment.OnFragmentInteractionListener {
 
+
     lateinit var data_niveles: WordMatchWordViewModel
     var level_completed = ArrayList<Boolean>()
 
@@ -93,6 +94,15 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
         Log.d("arreglo", level_completed.toString() + "start")
     }
 
+    override fun reiniciar() {
+        Log.d("reiniciar","si entra")
+        data_niveles.nukeTable()
+
+        data_niveles.allLevels.forEachIndexed { index, i ->
+            data_niveles.insert(MatchWordGame(index,false))
+        }
+    }
+
     fun getArrayListBoolean(lista: List<Boolean>?): ArrayList<Boolean> {
         var array = ArrayList<Boolean>()
         //Log.d("size", lista?.size.toString())
@@ -118,7 +128,7 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
 
         val newFragment: Fragment
 
-        if (currentLevel == 2) {
+        if (currentLevel == data_niveles.allLevels.size) {
             newFragment = GameCompletedFragment.newInstance()
         } else {
             newFragment = LevelCompletedFragment.newInstance()
