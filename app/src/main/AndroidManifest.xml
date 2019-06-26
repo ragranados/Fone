@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/ic_launcherr_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".activities.AccesibilityActivity">
+        </activity>
         <activity android:name=".activities.GameDislexia">
         </activity>
         <activity

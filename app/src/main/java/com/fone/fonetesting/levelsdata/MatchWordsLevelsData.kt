@@ -28,20 +28,6 @@ class MatchWordsLevelsData(private val matchWordGameDao: MatchWordGameDao) {
 
         addLevel()
 
-        nivel.add("Jitete")
-        nivel.add("Florero")
-        nivel.add("Flomero")
-        nivel.add("Jinete")
-
-        addLevel()
-
-        nivel.add("plancha")
-        nivel.add("tlancha")
-        nivel.add("Sandia")
-        nivel.add("Pandia")
-
-        addLevel()
-
         nivel.add("prosa")
         nivel.add("porsa")
         nivel.add("lata")
