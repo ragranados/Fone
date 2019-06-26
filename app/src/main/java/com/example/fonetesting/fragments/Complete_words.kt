@@ -51,18 +51,12 @@ class Complete_words : Fragment() {
         val viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
         val view= inflater.inflate(R.layout.fragment_complete_words, container, false).apply {
 
-
-
-            /* findViewById<TextView>(R.id.tv_word).text = arguments?.getString("palabra")
-             findViewById<TextView>(R.id.tv_cont).text = arguments?.getString("cont")*/
         }
 
         viewModel.getLevel().observe(this, Observer { gam->
             gam?.let {
                 tv_cont.text=gam.nivel.toString()
-
-
-                Log.d("HG", "Este nivel le mando" + gam.nivel.toString() + "Y el id" + gam.id.toString())            }
+            }
 
         })
 

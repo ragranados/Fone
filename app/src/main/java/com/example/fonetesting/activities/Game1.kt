@@ -79,6 +79,9 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
                     tv_cont.text=((aux+1)).toString()
 
                     viewModel.updateLevel(aux+1)
+
+                    lista[aux+1]
+
                     tv_word.text=listaaux[aux+1]
                     opc1.text=listaopc[aux+1].toString()
                     opc2.text=listaopc1[aux+1].toString()
