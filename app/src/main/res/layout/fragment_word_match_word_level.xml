@@ -16,24 +16,21 @@
             android:id="@+id/indicaciones"
             android:textColor="#000"
             android:background="@drawable/soundicon"
-            android:textSize="30dp"
             android:textStyle="bold"
             android:layout_marginLeft="150dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             />
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="105dp">
 
             <TextView
                 android:id="@+id/titulo_nivel"
                 android:fontFamily="@font/athfont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="75dp"
+                android:layout_marginBottom="50dp"
                 android:text="Nivel 1"
                 android:textColor="@color/darkBlue"
                 android:textSize="50dp"/>
