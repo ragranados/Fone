@@ -5,6 +5,7 @@
     android:id="@+id/second_lvl_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
     tools:context=".fragments.SecondLevelFragment">
 
