@@ -19,7 +19,6 @@ class MatchWordsLevelsData(private val matchWordGameDao: MatchWordGameDao) {
         nivel.add("ta")
         nivel.add("ap")
         nivel.add("la")
-        Log.d("datos","si crea clase")
         //level_completed.add(false)
 
         //matchWordGameDao.insert(MatchWordGame(false))
@@ -42,7 +41,6 @@ class MatchWordsLevelsData(private val matchWordGameDao: MatchWordGameDao) {
 
         addLevel()
 
-        //Log.d("datos", "datos creados")
 
     }
 
@@ -60,14 +58,6 @@ class MatchWordsLevelsData(private val matchWordGameDao: MatchWordGameDao) {
 
         nivel.clear()
     }
-
-    /*@WorkerThread
-    suspend fun addPassedLevels(){
-        for(i in 0 until levels_data.size){
-            matchWordGameDao.insert(MatchWordGame(false))
-            Log.d("datos", "intertados")
-        }
-    }*/
 
     @WorkerThread
     suspend fun insert(game: MatchWordGame){

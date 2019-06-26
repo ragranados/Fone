@@ -16,6 +16,8 @@ import com.example.fonetesting.fragments.GameCompletedFragment
 import com.example.fonetesting.fragments.LevelCompletedFragment
 import com.example.fonetesting.fragments.WordMatchWordLevelFragment
 import com.example.fonetesting.levelsdata.MatchWordsLevelsData
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
@@ -39,7 +41,7 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_word_match_word_level)
-        Log.d("datos", "datos creados")
+
 
         data_niveles = ViewModelProviders.of(this).get(WordMatchWordViewModel::class.java)
 
@@ -57,11 +59,18 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
                 }
             }
 
+            //var baseDeDatos = FirebaseDatabase.getInstance()
+
+
+
             currentLevel = getLevel(level_completed)
 
             setLevelFragment(currentLevel, level_completed.size)
         }
         leveeeels.observeForever(observador)
+
+        var baseDeDatos = FirebaseDatabase.getInstance()
+
 
         mTTs = TextToSpeech(this, TextToSpeech.OnInitListener { status ->
             if (status == TextToSpeech.SUCCESS) {
@@ -78,7 +87,7 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
     override fun onResume() {
         super.onResume()
 
-        Log.d("arreglo", level_completed.toString() + "start")
+
     }
 
     override fun onDestroy() {
@@ -91,11 +100,11 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
 
         super.onDestroy()
 
-        Log.d("arreglo", level_completed.toString() + "start")
+
     }
 
     override fun reiniciar() {
-        Log.d("reiniciar", "si entra")
+
         data_niveles.nukeTable()
 
         data_niveles.allLevels.forEachIndexed { index, i ->
@@ -105,11 +114,11 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
 
     fun getArrayListBoolean(lista: List<Boolean>?): ArrayList<Boolean> {
         var array = ArrayList<Boolean>()
-        //Log.d("size", lista?.size.toString())
+
         if (lista != null) {
             for (i in lista) {
                 array.add(i)
-                //Log.d("arreglo", lista.size.toString())
+
             }
         }
 

@@ -19,7 +19,7 @@ import com.example.fonetesting.levelsdata.MatchWordsLevelsData
 import kotlinx.android.synthetic.main.fragment_word_match_word_level.view.*
 
 class WordMatchWordLevelFragment : Fragment() {
-    lateinit var data_nivel : ArrayList<String>
+    lateinit var data_nivel: ArrayList<String>
     var level: Int = 0
     lateinit var fragmentView: View
     private var listener: OnFragmentInteractionListener? = null
@@ -48,7 +48,7 @@ class WordMatchWordLevelFragment : Fragment() {
             listener?.speak("Arrastra las palabras de la derecha y ordénalas de manera que sean como las de la izquierda")
         }
 
-       if(level!= 0){
+        if (level != 0) {
             fragmentView.indicaciones.visibility = View.GONE
         }
 
@@ -77,7 +77,6 @@ class WordMatchWordLevelFragment : Fragment() {
     }
 
     interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         fun onLevelPassed()
 
         fun speak(text: String)
@@ -103,8 +102,6 @@ class WordMatchWordLevelFragment : Fragment() {
         }*/
 
 
-
-
         var dragListenerPalabra1 = View.OnDragListener(fun(v: View, event: DragEvent): Boolean {
 
             var dragEvent: Int = event.action
@@ -113,7 +110,6 @@ class WordMatchWordLevelFragment : Fragment() {
             when (dragEvent) {
                 DragEvent.ACTION_DROP -> {
                     var view: View = event.localState as View
-                    Log.d("idView", "droped")
                     if (view.id == fragmentView.txt2.id) {
                         aux = fragmentView.txt1.text.toString()
                         fragmentView.txt1.text = fragmentView.txt2.text.toString()
@@ -130,7 +126,6 @@ class WordMatchWordLevelFragment : Fragment() {
                 }
                 DragEvent.ACTION_DRAG_ENTERED -> {
 
-                    Log.d("idView", "entrado")
 
                 }
             }
@@ -145,7 +140,6 @@ class WordMatchWordLevelFragment : Fragment() {
             when (dragEvent) {
                 DragEvent.ACTION_DROP -> {
                     var view: View = event.localState as View
-                    Log.d("idView", "droped")
                     if (view.id == fragmentView.txt1.id) {
                         aux = fragmentView.txt2.text.toString()
                         fragmentView.txt2.text = fragmentView.txt1.text.toString()
@@ -162,7 +156,7 @@ class WordMatchWordLevelFragment : Fragment() {
                 }
                 DragEvent.ACTION_DRAG_ENTERED -> {
 
-                    Log.d("idView", "entrado")
+
 
                 }
             }
@@ -177,7 +171,6 @@ class WordMatchWordLevelFragment : Fragment() {
             when (dragEvent) {
                 DragEvent.ACTION_DROP -> {
                     var view: View = event.localState as View
-                    Log.d("idView", "droped")
                     if (view.id == fragmentView.txt1.id) {
                         aux = fragmentView.txt1.text.toString()
                         fragmentView.txt1.text = fragmentView.txt3.text.toString()
@@ -194,7 +187,6 @@ class WordMatchWordLevelFragment : Fragment() {
                 }
                 DragEvent.ACTION_DRAG_ENTERED -> {
 
-                    Log.d("idView", "entrado")
 
                 }
             }
@@ -209,7 +201,6 @@ class WordMatchWordLevelFragment : Fragment() {
             when (dragEvent) {
                 DragEvent.ACTION_DROP -> {
                     var view: View = event.localState as View
-                    Log.d("idView", "droped")
                     if (view.id == fragmentView.txt1.id) {
                         aux = fragmentView.txt4.text.toString()
                         fragmentView.txt4.text = fragmentView.txt1.text.toString()
@@ -226,7 +217,6 @@ class WordMatchWordLevelFragment : Fragment() {
                 }
                 DragEvent.ACTION_DRAG_ENTERED -> {
 
-                    Log.d("idView", "entrado")
 
                 }
             }
