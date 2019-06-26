@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import com.example.fonetesting.R
 import com.example.fonetesting.architecture_components.GameViewModel
@@ -20,12 +21,21 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
     }
 
     override fun option1() {
-        choose_option(opc1.text as String)
+        val numero2 = tv_aux.getText().toString().toInt()
+        if(numero2==0){
+            choose_option(opc1.text as String)
+            tv_aux.text=(1).toString()
+        }
+
     }
 
 
     override fun option2() {
-        choose_option(opc2.text as String)
+        val numero2 = tv_aux.getText().toString().toInt()
+        if(numero2==0) {
+            choose_option(opc2.text as String)
+            tv_aux.text=(1).toString()
+        }
     }
 
 
@@ -35,14 +45,16 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
         val numero1 = tv_cont.getText().toString()
         val aux=numero1.toInt()
 
+
         val te= btn_verification.getText().toString()
         opc1.text=listaopc[aux].toString()
         opc2.text=listaopc1[aux].toString()
+
         if(te.equals("Iniciar")){
             btn_verification.text="Verificar"
         }
 
-        if(aux+1==6){
+        if(te.equals("Salir") ){
             tv_cont.text=(0).toString()
             viewModel.updateLevel(0)
 
@@ -53,6 +65,7 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
 
         }
         else{
+
             if(aux<lista.size-1){
 
 
@@ -69,16 +82,23 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
                     tv_word.text=listaaux[aux+1]
                     opc1.text=listaopc[aux+1].toString()
                     opc2.text=listaopc1[aux+1].toString()
+                    tv_aux.text=(0).toString()
+                    Toast.makeText(this, "¡Excelente! Vamos con la siguiente palabra", Toast.LENGTH_SHORT).show()
 
                 }
                 else{
                     tv_word.text=listaaux[aux]
+                    tv_aux.text=(0).toString()
+                    Toast.makeText(this, "¡Tu puedes!", Toast.LENGTH_SHORT).show()
                 }
             }
             else{
                 tv_word.text="Fin del juego"
                 viewModel.updateLevel(0)
-                startActivity(Intent(this, MainActivity::class.java))
+                opc1.text=""
+                opc2.text=""
+                Toast.makeText(this, "¡Lo hiciste muy bien!", Toast.LENGTH_SHORT).show()
+                btn_verification.text="Salir"
 
             }
 
@@ -98,10 +118,13 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
     }
 
 
-    val lista = arrayOf("papa", "queso", "pequeño", "tarde", "grama", "tapadera", "broma")
-    val listaaux= arrayOf("pa_a", "_ueso", "pe_ueño", "ta_de", "_rama", "ta_adera", "_roma")
-    val listaopc=  arrayOf("p", "p", "p", "r", "g", "b")
-    val listaopc1= arrayOf("q", "q", "q", "l", "q", "p")
+    val lista = arrayOf("papa", "queso", "pequeño", "tarde", "grama", "tapadera", "broma", "nube", "abuela", "libro", "balon",
+        "mesa", "telefono", "lampara", "television", "naranja", "maleta", "elefante", "viento", "galleta", "cable", "barco", "pepino")
+    val listaaux= arrayOf("pa_a", "_ueso", "pe_ueño", "ta_de", "_rama", "ta_adera", "_roma", "_ube", "a_uela", "li_ro", "_alon",
+        "me_a", "tele_ono", "lam_ara", "te_evision", "_aranja", "ma_eta", "ele_ante", "vien_o", "galle_a", "ca_le", "ba_co", "pe_ino")
+    val listaopc=  arrayOf("p", "p", "p", "r", "g", "b", "t", "n", "b", "p","p", "s", "f", "p", "t", "m", "l", "t", "l", "t", "p", "r", "b")
+    val listaopc1= arrayOf("q", "q", "q", "l", "q", "p", "b", "m", "p", "b","b", "z", "t", "b", "l", "n", "t", "f", "t", "p", "b", "l", "p")
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -15,6 +15,8 @@
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:layout_gravity="center"
 
                   android:id="@+id/tv_cont"  android:visibility="invisible"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:id="@+id/tv_aux" android:visibility="invisible"/>
     </LinearLayout>
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="50sp" android:orientation="vertical">
@@ -31,7 +33,7 @@
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:layout_gravity="center" android:layout_margin="50sp" android:orientation="horizontal">
         <LinearLayout android:layout_width="wrap_content" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_margin="15sp" android:orientation="vertical">
 
-            <TextView android:layout_width="10sp" android:layout_margin="10sp" android:textSize="20sp"
+            <TextView android:layout_width="25sp" android:layout_margin="10sp" android:textSize="20sp"
                       android:layout_height="wrap_content" android:text="" android:id="@+id/opc1"
                       android:layout_gravity="center"/>
 
@@ -39,7 +41,9 @@
 
         <LinearLayout android:layout_width="wrap_content" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_margin="15sp" android:orientation="vertical">
 
-            <TextView android:layout_width="10sp" android:layout_margin="10sp" android:textSize="20sp" android:layout_height="wrap_content" android:text=""  android:id="@+id/opc2"  android:layout_gravity="center"/>
+            <TextView android:layout_width="25sp" android:layout_margin="10sp" android:textSize="20sp"
+                      android:layout_height="wrap_content" android:text="" android:id="@+id/opc2"
+                      android:layout_gravity="center"/>
         </LinearLayout>
 
 
@@ -49,7 +53,7 @@
     </LinearLayout>
 
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="50sp" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="30sp" android:orientation="vertical">
 
          <Button android:layout_width="wrap_content"  android:textSize="20sp" android:layout_height="wrap_content" android:text="Iniciar"  android:id="@+id/btn_verification"  android:layout_gravity="center"/>
 
