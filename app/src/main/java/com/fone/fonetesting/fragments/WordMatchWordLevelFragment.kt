@@ -42,7 +42,7 @@ class WordMatchWordLevelFragment : Fragment() {
         }
 
         fragmentView.indicaciones.setOnClickListener {
-            listener?.speak("Presiona y arrastra las palabras de la derecha y ordénalas de manera que sean como las de la izquierda")
+            listener?.speak("Presiona y arrastra las palabras de la izquierda y ordénalas de manera que sean como las de la derecha")
         }
 
         if (level != 0) {
