@@ -2,5 +2,5 @@
 <resources>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="word_match_word_text_size_portrait">20dp</dimen>
+    <dimen name="word_match_word_text_size_portrait">35sp</dimen>
 </resources>
