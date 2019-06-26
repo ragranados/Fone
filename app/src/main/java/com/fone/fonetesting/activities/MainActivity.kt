@@ -13,6 +13,11 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListener, SettingsFragment.OnFragmentInteractionListener, FirstLevelFragment.SearchInformationListener {
+    override fun GameDislexia() {
+        var mIntent = Intent(this, GameDislexia::class.java)
+        this.startActivity(mIntent)
+    }
+
     override fun dislexia() {
         var mIntent = Intent(this, Information::class.java)
         val texto1= "La dislexia se puede evidenciar ya que las personas manifiestan dificultades para recitar el alfabeto, denominar letras, realizar rimas simples y para analizar o clasificar los sonidos."
@@ -70,9 +75,6 @@ class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListe
 
     override fun Game1() {
         var mIntent = Intent(this, Game1::class.java)
-
-
-
 
         mIntent.putExtra("key_level", "hola")
 
