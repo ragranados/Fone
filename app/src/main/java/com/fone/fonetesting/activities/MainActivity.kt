@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListener, SettingsFragment.OnFragmentInteractionListener, FirstLevelFragment.SearchInformationListener {
     override fun GameDislexia() {
         var mIntent = Intent(this, GameDislexia::class.java)
+        mIntent.putExtra("key_level", "hola")
         this.startActivity(mIntent)
     }
 
