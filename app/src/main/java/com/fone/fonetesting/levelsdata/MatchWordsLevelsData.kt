@@ -18,9 +18,6 @@ class MatchWordsLevelsData(private val matchWordGameDao: MatchWordGameDao) {
         nivel.add("ta")
         nivel.add("ap")
         nivel.add("la")
-        //level_completed.add(false)
-
-        //matchWordGameDao.insert(MatchWordGame(false))
 
         addLevel()
 
@@ -28,7 +25,20 @@ class MatchWordsLevelsData(private val matchWordGameDao: MatchWordGameDao) {
         nivel.add("tla")
         nivel.add("apa")
         nivel.add("lalo")
-        //level_completed.add(false)
+
+        addLevel()
+
+        nivel.add("Jitete")
+        nivel.add("Florero")
+        nivel.add("Flomero")
+        nivel.add("Jinete")
+
+        addLevel()
+
+        nivel.add("plancha")
+        nivel.add("tlancha")
+        nivel.add("Sandia")
+        nivel.add("Pandia")
 
         addLevel()
 
@@ -36,7 +46,27 @@ class MatchWordsLevelsData(private val matchWordGameDao: MatchWordGameDao) {
         nivel.add("porsa")
         nivel.add("lata")
         nivel.add("lala")
-        //level_completed.add(false)
+
+        addLevel()
+
+        nivel.add("raton")
+        nivel.add("gaton")
+        nivel.add("carton")
+        nivel.add("tarcon")
+
+        addLevel()
+
+        nivel.add("cisco")
+        nivel.add("disco")
+        nivel.add("lisco")
+        nivel.add("visco")
+
+        addLevel()
+
+        nivel.add("debo")
+        nivel.add("bebo")
+        nivel.add("dedo")
+        nivel.add("dado")
 
         addLevel()
 
