@@ -13,12 +13,15 @@
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Niveles"
+        android:text="Juegos"
+        android:paddingBottom="10dp"
+        android:textColor="@color/darkBlue"
+        android:background="@drawable/pergamino"
         android:textSize="40sp"
         android:gravity="center"/>
 
     <LinearLayout
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -48,7 +51,7 @@
                     android:layout_weight="2"
                     android:layout_marginLeft="50dp"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="30sp"
                     android:text="Completa la palabra!" />
 
 
@@ -99,8 +102,8 @@
                     android:layout_weight="2"
                     android:layout_marginLeft="50dp"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:text="El juego de \nRaúl" />
+                    android:textSize="35sp"
+                    android:text="Arrastra y gana" />
 
 
                 <Button
@@ -150,7 +153,7 @@
                     android:layout_weight="2"
                     android:text="Click imagen"
                     android:layout_marginLeft="50dp"
-                    android:textSize="20sp"
+                    android:textSize="35sp"
                     android:fontFamily="@font/athfont"
                     android:textColor="@color/white"/>
 

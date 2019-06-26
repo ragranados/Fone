@@ -55,7 +55,13 @@
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="30sp" android:orientation="vertical">
 
-         <Button android:layout_width="wrap_content"  android:textSize="20sp" android:layout_height="wrap_content" android:text="Iniciar"  android:id="@+id/btn_verification"  android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/btn_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:text="Iniciar"
+            android:textSize="20sp" />
 
     </LinearLayout>
 

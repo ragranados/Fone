@@ -6,17 +6,17 @@ import android.os.Bundle
 import com.fone.fonetesting.R
 import java.lang.Exception
 
-class SplashActivity : AppCompatActivity() {
+class SplashTwo: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.splash_activity)
+        setContentView(R.layout.activity_splash_two)
 
         val background = object : Thread(){
             override fun run() {
                 try {
-                    Thread.sleep(2000)
-                    val intent = Intent(baseContext, SplashTwo::class.java)
+                    Thread.sleep(3000)
+                    val intent = Intent(baseContext, LoginActivity::class.java)
                     startActivity(intent)
                 } catch (e: Exception){
                     e.printStackTrace()

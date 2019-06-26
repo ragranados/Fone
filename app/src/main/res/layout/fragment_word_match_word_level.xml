@@ -13,24 +13,33 @@
             android:gravity="center"
             android:orientation="vertical">
         <TextView
-                android:id="@+id/indicaciones"
-                android:textColor="#000"
-                android:text="\?"
-                android:textSize="30dp"
-                android:textFontWeight="40"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-        />
+            android:id="@+id/indicaciones"
+            android:textColor="#000"
+            android:background="@drawable/soundicon"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
-        <TextView
+            <TextView
                 android:id="@+id/titulo_nivel"
                 android:fontFamily="@font/athfont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="150dp"
+                android:layout_marginBottom="75dp"
                 android:text="Nivel 1"
-                android:textColor="#000000"
-                android:textSize="40dp"/>
+                android:textColor="@color/darkBlue"
+                android:textSize="50dp"/>
+
+        </LinearLayout>
+
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -40,23 +49,29 @@
 
             <TextView
                     android:id="@+id/txt1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/pergamino"
+                    android:textStyle="bold"
                     android:gravity="center"
-                    android:minWidth="120dp"
+                    android:paddingBottom="15dp"
                     android:text="palabra 1"
-                    android:textColor="#a0d8ef"
-                    android:textSize="@dimen/word_match_word_text_size_portrait"/>
+                    android:textColor="@color/darkBlue"
+                    android:textSize="35sp"/>
 
             <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="30dp"
                     android:layout_height="match_parent"></LinearLayout>
 
             <TextView
-                    android:textSize="@dimen/word_match_word_text_size_portrait"
+                    android:textSize="35sp"
+                    android:paddingLeft="60dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/darkBlue"
                     android:id="@+id/txt5"
-                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:background="@drawable/pergamino"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"/>
 
         </LinearLayout>
@@ -69,24 +84,31 @@
 
             <TextView
                     android:id="@+id/txt2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="50dp"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/pergamino"
                     android:gravity="center"
                     android:minWidth="120dp"
+                android:paddingBottom="15dp"
+                android:textStyle="bold"
                     android:text="palabra 2"
-                    android:textColor="#a0d8ef"
+                    android:textColor="@color/darkBlue"
                     android:textSize="@dimen/word_match_word_text_size_portrait"/>
 
             <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="30dp"
                     android:layout_height="match_parent"></LinearLayout>
 
             <TextView
-                    android:textSize="@dimen/word_match_word_text_size_portrait"
+                    android:textSize="35sp"
                     android:id="@+id/txt6"
-                    android:layout_width="wrap_content"
+                    android:background="@drawable/pergamino"
+                    android:layout_width="150dp"
+                android:paddingLeft="60dp"
+                android:textStyle="bold"
+                android:paddingBottom="15dp"
+                android:textColor="@color/darkBlue"
                     android:layout_height="wrap_content"/>
 
         </LinearLayout>
@@ -100,23 +122,30 @@
 
             <TextView
                     android:id="@+id/txt3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/pergamino"
                     android:gravity="center"
                     android:minWidth="120dp"
+                    android:textStyle="bold"
                     android:text="palabra 3"
-                    android:textColor="#a0d8ef"
+                android:paddingBottom="15dp"
+                    android:textColor="@color/darkBlue"
                     android:textSize="@dimen/word_match_word_text_size_portrait"/>
 
             <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="30dp"
                     android:layout_height="match_parent"></LinearLayout>
 
             <TextView
-                    android:textSize="@dimen/word_match_word_text_size_portrait"
+                    android:textSize="35sp"
                     android:id="@+id/txt7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
+                android:paddingLeft="60dp"
+                android:textStyle="bold"
+                android:paddingBottom="15dp"
+                android:textColor="@color/darkBlue"
+                    android:background="@drawable/pergamino"
                     android:layout_height="wrap_content"/>
 
         </LinearLayout>
@@ -129,32 +158,42 @@
 
             <TextView
                     android:id="@+id/txt4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorPrimaryDark"
+                    android:background="@drawable/pergamino"
                     android:gravity="center"
                     android:minWidth="120dp"
+                android:paddingBottom="15dp"
                     android:text="palabra 3"
-                    android:textColor="#a0d8ef"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkBlue"
                     android:textSize="@dimen/word_match_word_text_size_portrait"/>
 
             <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="30dp"
                     android:layout_height="match_parent"></LinearLayout>
 
             <TextView
-                    android:textSize="@dimen/word_match_word_text_size_portrait"
+                    android:textSize="35sp"
                     android:id="@+id/txt8"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
+                    android:paddingLeft="60dp"
+                    android:paddingBottom="15dp"
+                android:textStyle="bold"
+                    android:textColor="@color/darkBlue"
+                    android:background="@drawable/pergamino"
                     android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
         <Button
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="35dp"
                 android:id="@+id/evaluar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:fontFamily="@font/athfont"
+                android:backgroundTint="@color/darkBlue"
                 android:text="Evaluar"/>
 
 
