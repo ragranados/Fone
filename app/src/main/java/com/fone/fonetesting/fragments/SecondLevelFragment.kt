@@ -19,6 +19,7 @@ class SecondLevelFragment : Fragment() {
 
         fun Game1()
         fun JuegoUnirPalabras()
+        fun GameDislexia()
 
     }
 
@@ -31,10 +32,15 @@ class SecondLevelFragment : Fragment() {
 
         }
         initGame1(view)
+        initGameDislexia(view)
 
         view.b_juego_unir_palabras.setOnClickListener { iniciarJuegoUnirPalabras() }
 
         return view
+    }
+
+    fun initGameDislexia(container: View)= container.btn_game_dislexia.setOnClickListener {
+        listenerTool?.GameDislexia()
     }
 
     fun initGame1(container: View) = container.btn_play_game1.setOnClickListener {
