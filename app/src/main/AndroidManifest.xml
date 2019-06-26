@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.fonetesting">
+          package="com.fone.fonetesting">
 
     <application
             android:allowBackup="true"
@@ -9,14 +9,14 @@
             android:roundIcon="@mipmap/ic_launcherr_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".activities.Information">
+        <activity android:name="com.fone.fonetesting.activities.Information">
         </activity>
-        <activity android:name=".activities.WordMatchWordLevelActivity">
+        <activity android:name="com.fone.fonetesting.activities.WordMatchWordLevelActivity">
         </activity>
-        <activity android:name=".activities.Game1">
+        <activity android:name="com.fone.fonetesting.activities.Game1">
         </activity>
         <activity
-                android:name=".activities.SplashActivity"
+                android:name="com.fone.fonetesting.activities.SplashActivity"
                 android:noHistory="true"
                 android:theme="@style/SplashTheme">
             <intent-filter>
@@ -25,10 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LoginActivity"/>
-        <activity android:name=".activities.RegisterActivity"/>
-        <activity android:name=".activities.MainActivity"/>
-        <activity android:name=".activities.ForgotPasswordActivity"/>
+        <activity android:name="com.fone.fonetesting.activities.LoginActivity"/>
+        <activity android:name="com.fone.fonetesting.activities.RegisterActivity"/>
+        <activity android:name="com.fone.fonetesting.activities.MainActivity"/>
+        <activity android:name="com.fone.fonetesting.activities.ForgotPasswordActivity"/>
     </application>
 
 </manifest>
