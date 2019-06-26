@@ -26,6 +26,8 @@ private const val ARG_PARAM2 = "param2"
  */
 class Complete_words : Fragment() {
 
+    lateinit var fragmentView: View
+
     var listenerTool :  SearchNewMovieListener? = null
 
     interface SearchNewMovieListener{
@@ -34,11 +36,7 @@ class Complete_words : Fragment() {
 
         fun option1()
         fun option2()
-
-
-
-
-
+        fun speak(text: String)
     }
 
 
@@ -58,6 +56,11 @@ class Complete_words : Fragment() {
 
         })
 
+        fragmentView = view
+
+        fragmentView.indicaciones_walter.setOnClickListener {
+            listenerTool?.speak("Selecciona la letra correcta que complete la palabra mostrada")
+        }
 
         initSearchButton(view)
 

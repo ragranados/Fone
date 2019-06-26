@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListe
     var setting = Settings.instance
     override fun GameDislexia() {
         var mIntent = Intent(this, GameDislexia::class.java)
+        mIntent.putExtra("key_level", "hola")
         this.startActivity(mIntent)
     }
 

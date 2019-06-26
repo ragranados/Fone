@@ -42,17 +42,17 @@ class Dislexia_game : Fragment() {
         return view
     }
 
-    fun initNext(container:View) = container_game_dislexia.btn_verificar.setOnClickListener {
+    fun initNext(container:View) = container.btn_verificar.setOnClickListener {
         listenerTool?.nextWord()
     }
-    fun initOption1(container:View) = container_game_dislexia.tv_palabra1.setOnClickListener {
-        listenerTool?.nextWord()
+    fun initOption1(container:View) = container.tv_palabra1.setOnClickListener {
+        listenerTool?.option1()
     }
-    fun initOption2(container:View) = container_game_dislexia.tv_palabra2.setOnClickListener {
-        listenerTool?.nextWord()
+    fun initOption2(container:View) = container.tv_palabra2.setOnClickListener {
+        listenerTool?.option2()
     }
-    fun initOption3(container:View) = container_game_dislexia.tv_palabra3.setOnClickListener {
-        listenerTool?.nextWord()
+    fun initOption3(container:View) = container.tv_palabra3.setOnClickListener {
+        listenerTool?.option3()
     }
 
     override fun onAttach(context: Context) {

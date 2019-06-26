@@ -5,6 +5,7 @@
               android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               tools:context=".fragments.FirstLevelFragment"
+              android:background="@drawable/gradient"
               android:id="@+id/first_lvl_fragment">
 
     <TextView
@@ -102,7 +103,7 @@
                         android:layout_marginLeft="50dp"
                         android:textColor="@color/white"
                         android:textSize="35sp"
-                        android:text="Sintomas" />
+                        android:text="Alertas" />
 
 
                 <Button
@@ -150,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="2"
-                        android:text="Motivos"
+                        android:text="Recursos"
                         android:layout_marginLeft="50dp"
                         android:textSize="35sp"
                         android:fontFamily="@font/athfont"

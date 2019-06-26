@@ -3,15 +3,18 @@ package com.fone.fonetesting.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import com.fone.fonetesting.R
 import com.fone.fonetesting.architecture_components.GameViewModel
 import com.fone.fonetesting.fragments.Complete_words
 import kotlinx.android.synthetic.main.fragment_complete_words.*
+import java.util.*
 
 class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
 
+    lateinit var mTTs: TextToSpeech
     fun choose_option(option: String){
 
         var intento= tv_word.text.toString()
@@ -134,12 +137,33 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game1)
 
-
-
-
+        mTTs = TextToSpeech(this, TextToSpeech.OnInitListener { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                val spanish = Locale("es", "ES")
+                var result = mTTs.setLanguage(spanish)
+            }
+        })
 
         val fDetalles= Complete_words()
         fDetalles.arguments= intent.extras
         supportFragmentManager.beginTransaction().replace(R.id.container,fDetalles).commit()
     }
+
+    override fun speak(text: String) {
+        //var text = view.text.toString()
+        mTTs.setPitch(1.0f)
+        mTTs.setSpeechRate(1.0f)
+
+        mTTs.speak(text, TextToSpeech.QUEUE_FLUSH, null)
+        //mTTs.speak(text, TextToSpeech.QUEUE_FLUSH, null,null)
+
+    }
+
+    override fun onDestroy() {
+        if (mTTs != null) {
+            mTTs.stop()
+            mTTs.shutdown()
+        }
+    }
+
 }
