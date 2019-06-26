@@ -1,47 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              tools:context=".fragments.Dislexia_game">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="700dp"
+    android:orientation="vertical"
+    android:background="@drawable/background3"
+    tools:context=".fragments.Dislexia_game">
 
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="60dp" android:orientation="vertical">
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:visibility="invisible"
-                  android:id="@+id/tv_nivel" android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_nivel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:visibility="invisible" />
     </LinearLayout>
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="60dp"
-                  android:orientation="vertical">
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:visibility="invisible"
-                  android:id="@+id/tv_palabra_verificacion" android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_palabra_verificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="N/A"
+            android:visibility="invisible" />
     </LinearLayout>
 
-    <LinearLayout android:layout_width="match_parent" android:layout_height="60dp"
-                  android:orientation="vertical">
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:textSize="30dp"
-                  android:id="@+id/tv_palabra" android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_palabra"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="@drawable/soundicon"
+            android:textSize="30dp" />
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="60dp"
-                  android:orientation="vertical">
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""
-                  android:id="@+id/tv_palabra1" android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_palabra1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingLeft="25dp"
+            android:layout_gravity="center"
+            android:background="@drawable/blueribbon"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:text="" />
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="60dp"
-                  android:orientation="vertical">
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""
-                  android:id="@+id/tv_palabra2" android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_palabra2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:paddingLeft="25dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:background="@drawable/blueribbon"
+            android:text="" />
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="60dp"
-                  android:orientation="vertical">
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""
-                  android:id="@+id/tv_palabra3" android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_palabra3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/blueribbon"
+            android:layout_gravity="center"
+            android:paddingLeft="25dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:text="" />
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="60dp"
-                  android:orientation="vertical">
-        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Iniciar"
-                android:layout_gravity="center" android:id="@+id/btn_verificar"/>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_verificar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Iniciar" />
     </LinearLayout>
 
 
