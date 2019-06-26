@@ -8,6 +8,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.fone.fonetesting.R
+import com.fone.fonetesting.Settings
 import com.fone.fonetesting.architecture_components.MatchWordGame
 import com.fone.fonetesting.architecture_components.WordMatchWordViewModel
 import com.fone.fonetesting.fragments.GameCompletedFragment
@@ -144,8 +145,8 @@ class WordMatchWordLevelActivity : AppCompatActivity(), LevelCompletedFragment.O
 
     override fun speak(text: String) {
         //var text = view.text.toString()
-        mTTs.setPitch(1.0f)
-        mTTs.setSpeechRate(1.0f)
+        mTTs.setPitch(Settings.instance.pitch)
+        mTTs.setSpeechRate(Settings.instance.speed)
 
         mTTs.speak(text, TextToSpeech.QUEUE_FLUSH, null)
         //mTTs.speak(text, TextToSpeech.QUEUE_FLUSH, null,null)
