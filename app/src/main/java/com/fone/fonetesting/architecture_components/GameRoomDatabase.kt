@@ -28,7 +28,7 @@ abstract class GameRoomDatabase : RoomDatabase() {
                 val instance= Room.databaseBuilder(
                     context.applicationContext,
                     GameRoomDatabase::class.java,
-                    "Book_database"
+                    "Dislexia_database"
                 )
                     .addCallback(DatabseCall(scope))
                     .build()
@@ -52,7 +52,7 @@ abstract class GameRoomDatabase : RoomDatabase() {
 
 
         suspend fun LlenarDB(game1: game1Dao) {
-            var game= game1(0)
+            var game= game1(0, 0)
 
             game1.insert(game)
 

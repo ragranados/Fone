@@ -28,7 +28,12 @@ class GameViewModel(application: Application): AndroidViewModel(application) {
     fun getLevel() : LiveData<game1> = repository.getLevel()
 
 
+
     fun updateLevel(level : Int) = viewModelScope.launch(Dispatchers.IO) {
         repository.updateLevel(level)
+    }
+
+    fun updateLevel2(level : Int) = viewModelScope.launch(Dispatchers.IO) {
+        repository.updateLevel2(level)
     }
 }
