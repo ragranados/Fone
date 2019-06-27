@@ -30,9 +30,10 @@ class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListe
         val texto1 =
                 "La dislexia se puede evidenciar ya que las personas manifiestan dificultades para recitar el alfabeto, denominar letras, realizar rimas simples y para analizar o clasificar los sonidos."
         val texto2 =
-                "Es necesario aclarar un punto muy importante, las personas diagnosticadas con dislexia no es por problemas en la vision, ya que muchas personas creen que por el hecho de invertir las letras o escribirlas revés es debido a eso."
+            "Es necesario aclarar un punto muy importante, las personas diagnosticadas con dislexia no es por problemas en la visión, ya que muchas personas creen que por el hecho de invertir las letras o escribirlas revés es debido a eso."
         val texto3 =
-                "A las personas con dislexia el proceso de aprendizaje es mucho más complicado ya que casi todo se basa en lectura y escritura, pero esto no significa que no puedan llevar a cabo sus studios, ya que existen profesionales que ayudan con métodos de enseñanza, el primero en usar fue un enfoque llamado Orton-Gillingham (O-G)."
+            "A las personas con dislexia el proceso de aprendizaje es mucho más complicado ya que casi todo se basa en lectura y escritura, pero esto no significa que no puedan llevar a cabo sus estudios, ya que existen profesionales que ayudan con métodos de enseñanza, el primero en usar fue un enfoque llamado Orton-Gillingham (O-G)."
+
         val texto4 =
                 "Una de las cosas en que se enfoca esta instrucción es en la conciencia fonológica. Se trata de una habilidad del lenguaje que se desarrolla tempranamente y es clave para leer. Los especialistas en lectura y los patólogos del habla y el lenguaje pueden ayudar a los chicos a desarrollar esta habilidad. También pueden ayudar con la decodificación, el reconocimiento de palabras, la ortografía y la fluidez en la lectura."
         mIntent.putExtra("key_texto1", texto1)
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListe
     override fun sintomas() {
         var mIntent = Intent(this, Information::class.java)
         val texto1 =
-                "Es muy importante conocer los sintomas de la dislexia, ya que es algo que se presenta desde temprana edad, por ende, se puede confundir con errores comunes al momento en que se comienza a leer y a escribir. \n Algunos sintomas son: "
+            "Es muy importante conocer los síntomas  de la dislexia, ya que es algo que se presenta desde temprana edad, por ende, se puede confundir con errores comunes al momento en que se comienza a leer y a escribir. \n\n Algunos síntomas son: "
         val texto2 =
                 "En Preescolar tienen dificultad para aprender palabras nuevas y reconocer las letras y hacerlas coincidir con el sonido que producen. "
         val texto3 =

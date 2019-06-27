@@ -73,12 +73,11 @@ class LoginActivity: AppCompatActivity() {
             return
         }
 
-        Log.d("Login", "Attemp to login with email: $email")
 
         mAuth!!.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener{
                 if(!it.isSuccessful) return@addOnCompleteListener
-                Log.d("Main", "Log in successful with uid: ${it.result?.user?.uid}")
+
                 val intent = Intent(this, MainActivity::class.java)
 
                 startActivity(intent)
