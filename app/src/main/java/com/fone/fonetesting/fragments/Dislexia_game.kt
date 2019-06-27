@@ -11,7 +11,9 @@ import android.view.ViewGroup
 import com.fone.fonetesting.R
 import kotlinx.android.synthetic.main.activity_game_dislexia.*
 import kotlinx.android.synthetic.main.fragment_complete_words.view.*
+import kotlinx.android.synthetic.main.fragment_dislexia_game.*
 import kotlinx.android.synthetic.main.fragment_dislexia_game.view.*
+import kotlinx.android.synthetic.main.fragment_dislexia_game.view.tv_palabra
 
 
 class Dislexia_game : Fragment() {
@@ -19,6 +21,8 @@ class Dislexia_game : Fragment() {
     var listenerTool: SearchGameDislexiaListener? = null
 
     interface SearchGameDislexiaListener {
+
+        fun speak()
 
         fun nextWord()
 
@@ -39,6 +43,11 @@ class Dislexia_game : Fragment() {
         initOption1(view)
         initOption2(view)
         initOption3(view)
+
+        view.tv_palabra.setOnClickListener {
+            listenerTool?.speak()
+        }
+
         return view
     }
 
