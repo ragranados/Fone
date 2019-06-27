@@ -160,7 +160,7 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
     }
 
     override fun onDestroy() {
-        super.onDestroy()
+
         if (mTTs != null) {
             mTTs.stop()
             mTTs.shutdown()
