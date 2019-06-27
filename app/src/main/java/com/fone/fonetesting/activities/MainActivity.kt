@@ -67,12 +67,12 @@ class MainActivity : AppCompatActivity(), SecondLevelFragment.SearchNewGameListe
 
     override fun causas() {
         var mIntent = Intent(this, Information::class.java)
-        val texto1 = "Ampliando el por que de los sintomas: "
+        val texto1 = "Understood, Dislexia: Lo que es y lo que no es: \n"
         val texto2 =
-                "-Genes y herencia: A menudo la dislexia se presenta en miembros de la misma familia. Cerca del 40% de los hermanos de chicos con dislexia tienen las mismas dificultades con la lectura. El 49% de los padres/madres de chicos con dislexia también las tienen. Los científicos también han encontrado un grupo de genes relacionados con las dificultades para leer y con el procesamiento del lenguaje."
+                "https://www.understood.org/es-mx/learning-attention-issues/child-learning-disabilities/dyslexia/dyslexia-what-it-is-and-isnt \n \n"
         val texto3 =
-                "-Anatomía y actividad cerebral: Los estudios de imágenes del cerebro han mostrado diferencias entre las personas con y sin dislexia. Esas diferencias ocurren en áreas del cerebro relacionadas con habilidades para leer que son importantes. Esas destrezas son conocer cómo los sonidos son representados en palabras y reconocer cómo lucen las palabras escritas."
-        val texto4 = ""
+                "ladislexianet, Etiqueta: Asociación Internacional de Dislexia: \n "
+        val texto4 = "https://www.ladislexia.net/quees/asociacion-internacional-de-dislexia/"
         mIntent.putExtra("key_texto1", texto1)
         mIntent.putExtra("key_texto2", texto2)
         mIntent.putExtra("key_texto3", texto3)

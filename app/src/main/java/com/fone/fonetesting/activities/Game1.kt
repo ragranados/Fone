@@ -125,10 +125,10 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
     }
 
 
-    val lista = arrayOf("papa", "queso", "pequeño", "tarde", "grama", "tapadera", "broma", "nube", "abuela", "libro", "balon",
-        "mesa", "telefono", "lampara", "television", "naranja", "maleta", "elefante", "viento", "galleta", "cable", "barco", "pepino", "abril", "leon", "abeja", "aceite", "vaquero", "basquet", "tambor")
-    val listaaux= arrayOf("pa_a", "_ueso", "pe_ueño", "ta_de", "_rama", "ta_adera", "_roma", "_ube", "a_uela", "li_ro", "_alon",
-        "me_a", "tele_ono", "lam_ara", "te_evision", "_aranja", "ma_eta", "ele_ante", "vien_o", "galle_a", "ca_le", "ba_co", "pe_ino", "a_ril", "_eon", "a_eja", "acei_e", "va_uero", "bas_uet", "_ambor")
+    val lista = arrayOf("papa", "queso", "pequeño", "tarde", "grama", "tapadera", "broma", "nube", "abuela", "libro", "balón",
+        "mesa", "teléfono", "lampara", "televisión", "naranja", "maleta", "elefante", "viento", "galleta", "cable", "barco", "pepino", "abril", "león", "abeja", "aceite", "vaquero", "basquet", "tambor")
+    val listaaux= arrayOf("pa_a", "_ueso", "pe_ueño", "ta_de", "_rama", "ta_adera", "_roma", "_ube", "a_uela", "li_ro", "_alón",
+        "me_a", "telé_ono", "lam_ara", "te_evisión", "_aranja", "ma_eta", "ele_ante", "vien_o", "galle_a", "ca_le", "ba_co", "pe_ino", "a_ril", "_eón", "a_eja", "acei_e", "va_uero", "bas_uet", "_ambor")
     val listaopc=  arrayOf("p", "p", "p", "r", "g", "b", "t", "n", "b", "p","p", "s", "f", "p", "t", "m", "l", "t", "l", "t", "p", "r", "b", "b", "l", "p", "l", "b", "q", "f")
     val listaopc1= arrayOf("q", "q", "q", "l", "q", "p", "b", "m", "p", "b","b", "z", "t", "b", "l", "n", "t", "f", "t", "p", "b", "l", "p", "p", "t", "b", "t", "q", "g", "t")
 

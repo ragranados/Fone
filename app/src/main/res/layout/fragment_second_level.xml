@@ -152,7 +152,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="2"
-                    android:text="Click imagen"
+                    android:text="Escucha y Responde"
                     android:layout_marginLeft="50dp"
                     android:textSize="35sp"
                     android:fontFamily="@font/athfont"

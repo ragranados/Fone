@@ -16,9 +16,17 @@ import java.util.*
 
 class GameDislexia : AppCompatActivity(), Dislexia_game.SearchGameDislexiaListener {
     override fun speak() {
+        val te = btn_verificar.getText().toString()
         val numero1 = tv_nivel.getText().toString()
         val aux = numero1.toInt()
-        mTTs.speak(lista[aux],TextToSpeech.QUEUE_FLUSH,null)
+        if(te.equals("Verificar")){
+            mTTs.speak(lista[aux],TextToSpeech.QUEUE_FLUSH,null)
+        }
+        else{
+            mTTs.speak("Fin del juego",TextToSpeech.QUEUE_FLUSH,null)
+        }
+
+
     }
 
     lateinit var mTTs: TextToSpeech
@@ -30,7 +38,7 @@ class GameDislexia : AppCompatActivity(), Dislexia_game.SearchGameDislexiaListen
         val aux = numero1.toInt()
 
         val te = btn_verificar.getText().toString()
-        tv_palabra.text = lista[aux].toString()
+
         tv_palabra1.text = listaopc[aux].toString()
         tv_palabra2.text = listaopc1[aux].toString()
         tv_palabra3.text = listaopc2[aux].toString()
@@ -43,9 +51,6 @@ class GameDislexia : AppCompatActivity(), Dislexia_game.SearchGameDislexiaListen
             tv_nivel.text = (0).toString()
             viewModel.updateLevel2(0)
 
-
-
-            tv_palabra.text = "Fin del juego"
             tv_palabra1.text = ""
             tv_palabra2.text = ""
             tv_palabra3.text = ""
@@ -69,7 +74,7 @@ class GameDislexia : AppCompatActivity(), Dislexia_game.SearchGameDislexiaListen
 
 
 
-                    tv_palabra.text = lista[aux + 1]
+
                     tv_palabra3.text = listaopc2[aux + 1].toString()
                     tv_palabra1.text = listaopc[aux + 1].toString()
                     tv_palabra2.text = listaopc1[aux + 1].toString()
@@ -77,17 +82,18 @@ class GameDislexia : AppCompatActivity(), Dislexia_game.SearchGameDislexiaListen
                     Toast.makeText(this, "¡Excelente! Vamos con la siguiente palabra", Toast.LENGTH_SHORT).show()
 
                 } else {
-                    //tv_word.text=listaaux[aux]
 
-                    //Toast.makeText(this, "¡Tu puedes!", Toast.LENGTH_SHORT).show()
                 }
             } else {
-                tv_palabra.text = "Fin del juego"
-                viewModel.updateLevel2(0)
-                opc1.text = ""
-                opc2.text = ""
+                tv_palabra3.text = ""
+                tv_palabra1.text = ""
+                tv_palabra2.text = ""
+
+
                 Toast.makeText(this, "¡Lo hiciste muy bien!", Toast.LENGTH_SHORT).show()
                 btn_verificar.text = "Salir"
+                //viewModel.updateLevel2(0)
+
 
             }
 
