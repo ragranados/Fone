@@ -38,18 +38,14 @@ class RegisterActivity: AppCompatActivity() {
             return
         }
 
-        Log.d("RegisterActivity", "Email is: $email")
-        Log.d("RegisterActivity", "Password: $password")
-
         //Firebase
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener{
                 if(!it.isSuccessful) return@addOnCompleteListener
 
-                Log.d("Main", "Successfully created user with uid: ${it.result?.user?.uid}")
+
             }
             .addOnFailureListener{
-                Log.d("Main", "Failed to create user: ${it.message}")
                 Toast.makeText(this, "Failed to create user: ${it.message}", Toast.LENGTH_SHORT).show()
             }
 
