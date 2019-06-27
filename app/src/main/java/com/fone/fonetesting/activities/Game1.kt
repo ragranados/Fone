@@ -164,6 +164,8 @@ class Game1 : AppCompatActivity(), Complete_words.SearchNewMovieListener {
             mTTs.stop()
             mTTs.shutdown()
         }
+
+        super.onDestroy()
     }
 
 }

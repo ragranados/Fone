@@ -7,9 +7,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 
 import com.fone.fonetesting.R
+import com.fone.fonetesting.architecture_components.GameViewModel
 import kotlinx.android.synthetic.main.activity_game_dislexia.*
+import kotlinx.android.synthetic.main.fragment_complete_words.*
 import kotlinx.android.synthetic.main.fragment_complete_words.view.*
 import kotlinx.android.synthetic.main.fragment_dislexia_game.*
 import kotlinx.android.synthetic.main.fragment_dislexia_game.view.*
@@ -36,9 +40,19 @@ class Dislexia_game : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
         val view= inflater.inflate(R.layout.fragment_dislexia_game, container, false).apply {
 
         }
+
+        viewModel.getLevel().observe(this, Observer { gam->
+            gam?.let {
+                tv_nivel.text=gam.nivel_juego2.toString()
+            }
+
+        })
+
+
         initNext(view)
         initOption1(view)
         initOption2(view)

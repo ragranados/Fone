@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
 import com.fone.fonetesting.R
+import com.fone.fonetesting.architecture_components.GameViewModel
 import com.fone.fonetesting.fragments.Complete_words
 import com.fone.fonetesting.fragments.Dislexia_game
 import kotlinx.android.synthetic.main.fragment_complete_words.*
@@ -23,6 +25,7 @@ class GameDislexia : AppCompatActivity(), Dislexia_game.SearchGameDislexiaListen
 
 
     override fun nextWord() {
+        val viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
         val numero1 = tv_nivel.getText().toString()
         val aux = numero1.toInt()
 
@@ -38,6 +41,7 @@ class GameDislexia : AppCompatActivity(), Dislexia_game.SearchGameDislexiaListen
 
         if (te.equals("Salir")) {
             tv_nivel.text = (0).toString()
+            viewModel.updateLevel2(0)
 
 
 
@@ -61,7 +65,7 @@ class GameDislexia : AppCompatActivity(), Dislexia_game.SearchGameDislexiaListen
                 if (comprobando) {
                     tv_nivel.text = ((aux + 1)).toString()
 
-                    /*viewModel.updateLevel(aux+1)*/
+                    viewModel.updateLevel2(aux+1)
 
 
 
@@ -79,7 +83,7 @@ class GameDislexia : AppCompatActivity(), Dislexia_game.SearchGameDislexiaListen
                 }
             } else {
                 tv_palabra.text = "Fin del juego"
-                //viewModel.updateLevel(0)
+                viewModel.updateLevel2(0)
                 opc1.text = ""
                 opc2.text = ""
                 Toast.makeText(this, "¡Lo hiciste muy bien!", Toast.LENGTH_SHORT).show()

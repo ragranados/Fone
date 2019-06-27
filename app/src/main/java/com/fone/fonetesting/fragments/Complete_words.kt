@@ -51,7 +51,7 @@ class Complete_words : Fragment() {
 
         viewModel.getLevel().observe(this, Observer { gam->
             gam?.let {
-                tv_cont.text=gam.nivel.toString()
+                tv_cont.text=gam.nivel_juego1.toString()
             }
 
         })
