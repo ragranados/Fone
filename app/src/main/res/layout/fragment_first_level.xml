@@ -87,7 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
-                    android:src="@drawable/background2"/>
+                    android:src="@drawable/bg3"/>
 
             <LinearLayout
                     android:layout_width="match_parent"
@@ -138,7 +138,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
-                    android:src="@drawable/background1"/>
+                    android:src="@drawable/bg4"/>
 
             <LinearLayout
                     android:layout_width="match_parent"
