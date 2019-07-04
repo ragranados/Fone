@@ -32,14 +32,14 @@
                 android:layout_height="wrap_content"
                 android:text="Cerrar sesión"
                 android:backgroundTint="@color/darkBlue"
-                android:layout_marginBottom="25dp"/>
+                android:layout_marginBottom="24dp"/>
 
         <com.google.android.material.button.MaterialButton
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:text="Créditos"
                 android:backgroundTint="@color/darkBlue"
-                android:layout_marginBottom="25dp"/>
+                android:layout_marginBottom="24dp"/>
 
         <com.google.android.material.button.MaterialButton
                 android:id="@+id/Accesibilidad"
@@ -47,7 +47,7 @@
                 android:backgroundTint="@color/darkBlue"
                 android:layout_height="wrap_content"
                 android:text="Accesibilidad"
-                android:layout_marginBottom="25dp"/>
+                android:layout_marginBottom="21dp"/>
 
     </LinearLayout>
 

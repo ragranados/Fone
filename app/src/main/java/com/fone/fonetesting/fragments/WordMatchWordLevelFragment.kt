@@ -41,6 +41,8 @@ class WordMatchWordLevelFragment : Fragment() {
             listener?.speak((view as TextView).text.toString())
         }
 
+        //fragmentView.indicaciones.setImageResource(R.drawable.soundicon)
+
         fragmentView.indicaciones.setOnClickListener {
             listener?.speak("Presiona y arrastra las palabras de la izquierda y ordénalas de manera que sean como las de la derecha")
         }
@@ -48,6 +50,8 @@ class WordMatchWordLevelFragment : Fragment() {
         if (level != 0) {
             fragmentView.indicaciones.visibility = View.GONE
         }
+
+
 
         initListeners()
         setImages()

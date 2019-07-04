@@ -12,28 +12,48 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
-        <TextView
-            android:id="@+id/indicaciones"
-            android:textColor="#000"
-            android:background="@drawable/soundicon"
-            android:textStyle="bold"
-            android:layout_marginLeft="150dp"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="105dp">
 
-            <TextView
-                android:id="@+id/titulo_nivel"
-                android:fontFamily="@font/athfont"
+
+        <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
-                android:text="Nivel 1"
-                android:textColor="@color/darkBlue"
-                android:textSize="50dp"/>
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:id="@+id/titulo_nivel"
+                        android:fontFamily="@font/athfont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nivel 1"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="50dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"></LinearLayout>
+
+            <ImageView
+                    android:id="@+id/indicaciones"
+                    android:src="@drawable/soundicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+            />
+
+            <!--<TextView-->
+            <!--android:id="@+id/indicaciones"-->
+            <!--android:textColor="#000"-->
+            <!--android:background="@drawable/soundicon"-->
+            <!--android:textStyle="bold"-->
+            <!--android:layout_width="75dp"-->
+            <!--android:layout_height="75dp"/>-->
 
         </LinearLayout>
 
@@ -87,8 +107,8 @@
                     android:background="@drawable/pergamino"
                     android:gravity="center"
                     android:minWidth="120dp"
-                android:paddingBottom="15dp"
-                android:textStyle="bold"
+                    android:paddingBottom="15dp"
+                    android:textStyle="bold"
                     android:text="palabra 2"
                     android:textColor="@color/darkBlue"
                     android:textSize="@dimen/word_match_word_text_size_portrait"/>
@@ -102,10 +122,10 @@
                     android:id="@+id/txt6"
                     android:background="@drawable/pergamino"
                     android:layout_width="150dp"
-                android:paddingLeft="60dp"
-                android:textStyle="bold"
-                android:paddingBottom="15dp"
-                android:textColor="@color/darkBlue"
+                    android:paddingLeft="60dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/darkBlue"
                     android:layout_height="wrap_content"/>
 
         </LinearLayout>
@@ -126,7 +146,7 @@
                     android:minWidth="120dp"
                     android:textStyle="bold"
                     android:text="palabra 3"
-                android:paddingBottom="15dp"
+                    android:paddingBottom="15dp"
                     android:textColor="@color/darkBlue"
                     android:textSize="@dimen/word_match_word_text_size_portrait"/>
 
@@ -138,10 +158,10 @@
                     android:textSize="35sp"
                     android:id="@+id/txt7"
                     android:layout_width="150dp"
-                android:paddingLeft="60dp"
-                android:textStyle="bold"
-                android:paddingBottom="15dp"
-                android:textColor="@color/darkBlue"
+                    android:paddingLeft="60dp"
+                    android:textStyle="bold"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/darkBlue"
                     android:background="@drawable/pergamino"
                     android:layout_height="wrap_content"/>
 
@@ -160,7 +180,7 @@
                     android:background="@drawable/pergamino"
                     android:gravity="center"
                     android:minWidth="120dp"
-                android:paddingBottom="15dp"
+                    android:paddingBottom="15dp"
                     android:text="palabra 3"
                     android:textStyle="bold"
                     android:textColor="@color/darkBlue"
@@ -176,7 +196,7 @@
                     android:layout_width="150dp"
                     android:paddingLeft="60dp"
                     android:paddingBottom="15dp"
-                android:textStyle="bold"
+                    android:textStyle="bold"
                     android:textColor="@color/darkBlue"
                     android:background="@drawable/pergamino"
                     android:layout_height="wrap_content"/>
